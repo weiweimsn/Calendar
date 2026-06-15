@@ -1,0 +1,48 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>万年历 - Wei's Calendar</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script><script src="./libs/lunarCalendar.js"></script><script src="./libs/AlbertaStatHolidays.js"></script><script src="./libs/birthdays.js"></script><script src="./libs/ImportantDays.js"></script><script src="./libs/USStockClosedOrHalfClosedDay.js"></script><script src="./index.js"></script><link rel="shortcut icon" type="image/x-icon" href="./imgs/favicon.ico"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.css"/><style>body { font-family: 'Segoe UI', system-ui, sans-serif; }
+        
+        .calendar-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 15px;
+            padding: 10px 0;
+        }
+        
+        .month-nav {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.8rem;
+            font-weight: 600;
+            min-width: 280px;
+            justify-content: center;
+        }
+        
+        .jump-control {
+            background: #f8f9fa;
+            padding: 12px 20px;
+            border-radius: 12px;
+            margin: 15px 0 20px 0;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .selected-date {
+            background-color: #a0d8ff !important;
+            border: 2px solid #007bff !important;
+            font-weight: bold;
+        }
+        
+        .noStockTrading {
+            width: 18px;
+            height: 18px;
+            margin-left: 4px;
+        }
+        
+        .calendarBody .col {
+            min-height: 110px;
+            padding: 8px;
+            border: 1px solid #eee;
+            position: relative;
+        }</style><script defer="defer" src="calendar.js"></script></head><body class="container"><div class="calendar-header"><div class="previousMonth" id="previousMonth_btn" style="cursor:pointer; font-size:2rem;"><span class="oi oi-arrow-circle-left" title="Previous Month"></span></div><div class="month-nav" id="monthNav"><span id="currentYear"></span> <span id="currentMonth"></span></div><div class="nextMonth" style="cursor:pointer; font-size:2rem;"><span class="oi oi-arrow-circle-right" title="Next Month"></span></div></div><div class="jump-control"><div class="row align-items-center"><div class="col-md-8"><strong>跳转到日期：</strong> <select id="jumpYear" class="form-control d-inline-block mx-1" style="width:85px;"></select> 年 <select id="jumpMonth" class="form-control d-inline-block mx-1" style="width:70px;"></select> 月 <select id="jumpDay" class="form-control d-inline-block mx-1" style="width:70px;"></select> 日 <button id="jumpBtn" class="btn btn-primary ml-2">跳转到该日期</button></div><div class="col-md-4 text-right"><button id="todayBtn" class="btn btn-success">回到今天</button></div></div></div><div class="row header text-center"><div class="col"><img src="./imgs/weekday_icons/icons8-monday-48.png" alt="Mon"/></div><div class="col"><img src="./imgs/weekday_icons/icons8-tuesday-48.png" alt="Tue"/></div><div class="col"><img src="./imgs/weekday_icons/icons8-wednesday-48.png" alt="Wed"/></div><div class="col"><img src="./imgs/weekday_icons/icons8-thursday-48.png" alt="Thu"/></div><div class="col"><img src="./imgs/weekday_icons/icons8-friday-48.png" alt="Fri"/></div><div class="col"><img src="./imgs/weekday_icons/icons8-saturday-48.png" alt="Sat"/></div><div class="col"><img src="./imgs/weekday_icons/icons8-sunday-48.png" alt="Sun"/></div></div><div class="calendarBody"></div></body></html>
